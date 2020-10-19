@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1> Welcome to my gossip website ! The gossip list is coming soon.</h1>
+    <h2> You can create a new gossipright now by clicking on the link below </h2>
+    <a href="/gossips/new/">Create a new gossip</a>
+   
+    <h2> Here you can see all hthe gossip previously created : </h2>
+   		<% gossips.each do |gossip| %>
+        <p>
+          <%= gossip.author %><br/>
+          <%= gossip.content %>
+        </p>
+      <% end %>
+  
+  </body>
+</html>
