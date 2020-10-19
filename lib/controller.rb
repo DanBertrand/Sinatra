@@ -22,11 +22,9 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get '/gossips/:id' do
-		n = params['id']
-		gossip_to_show = Gossip.number(n)
+		erb :show_gossip
+
 		
-		 " #{gossip_to_show.author}\n " + " #{gossip_to_show.content}"
-	
 	end
 
 end		

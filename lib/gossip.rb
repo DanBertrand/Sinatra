@@ -33,7 +33,7 @@ class Gossip
 	  my_gossip = []
 	  CSV.read("./db/gossip.csv").each do |csv_line|
 	    all_gossips << Gossip.new(csv_line[0], csv_line[1])
-	    my_gossip = all_gossips[n]
+	    my_gossip = all_gossips[n-1]
 	  end
 	  return my_gossip
 	end

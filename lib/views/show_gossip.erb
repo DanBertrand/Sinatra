@@ -6,16 +6,20 @@
     <h1> Show Gossip.</h1>
 
    
-    <h2> Here you can the specific gossip number realted to the selected number into the dynamic URL: </h2>
+    <h2> PAGE POTIN </h2>
+    <% n = params['id'] %>
+    <% 		gossip_to_show = Gossip.number(n) %>
+    <p>Voici la page du potin n°<%= n %></p>
+    <p>Son auteur : <%= gossip_to_show.author %><br/> </p>
+    <p>Le contenu du potin : <%= gossip_to_show.content %><br/></p>
 
 
+    <a href="/">Lien pour revenir à la page des potins</a> 
 
-    			<% gossips.each do |gossip| %>
-    	     <p>
-    	       <%= gossip.author %><br/>
-    	       <%= gossip.content %>
-    	     </p>
-    	   <% end %>
+    
+    	  
+
+
 
 
 
